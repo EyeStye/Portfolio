@@ -107,7 +107,7 @@ export const timeline = [
   {
     year: "2024",
     title: "Joined IIT Patna",
-    description: "Began B.Tech in Computer Science and Engineering, CPI 8.71.",
+    description: "Began B.Tech in Computer Science and Engineering",
   },
   {
     year: "2025",
@@ -115,7 +115,7 @@ export const timeline = [
     description: "Ranked 384 nationally in the ICPC preliminary round.",
   },
   {
-    year: "2025",
+    year: "2026",
     title: "Competitive Programming Milestones",
     description:
       "Reached Specialist on Codeforces, Knight on LeetCode, and 3★ on CodeChef.",
