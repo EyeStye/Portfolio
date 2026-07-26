@@ -10,9 +10,20 @@ export default function Navbar({ theme, toggleTheme }) {
   const ids = navLinks.map((l) => l.href.replace("#", ""));
   const active = useActiveSection(ids);
 
-  const handleClick = (href) => {
+   const handleClick = (href) => {
+    const wasOpen = open;
     setOpen(false);
-    scrollToSection(href);
+ 
+    if (wasOpen) {
+      // The mobile menu is still animating closed (height/opacity) when this
+      // fires. Triggering window.scrollTo while that collapse animation is
+      // in flight causes some mobile browsers to silently drop the scroll
+      // request. Waiting for the collapse to finish (250ms, matching the
+      // AnimatePresence transition below) fixes it.
+      setTimeout(() => scrollToSection(href), 280);
+    } else {
+      scrollToSection(href);
+    }
   };
 
   return (
