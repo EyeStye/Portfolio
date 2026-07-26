@@ -27,7 +27,7 @@ export default function Navbar({ theme, toggleTheme }) {
       <nav className="relative max-w-6xl mx-auto flex items-center justify-between px-6 md:px-10 py-5">
         <button
           onClick={() => handleClick("#home")}
-          className="font-mono text-sm tracking-[0.15em] text-[var(--color-grey-100)] hover:text-[var(--color-moss-bright)] transition-colors"
+          className="font-mono text-[15px] tracking-[0.15em] text-[var(--color-grey-100)] hover:text-[var(--color-moss-bright)] transition-colors"
         >
           AY<span className="text-[var(--color-gold)]">.</span>
         </button>
@@ -40,7 +40,7 @@ export default function Navbar({ theme, toggleTheme }) {
               <li key={link.href}>
                 <button
                   onClick={() => handleClick(link.href)}
-                  className={`relative px-4 py-2 text-[13px] tracking-wide transition-colors rounded-full ${
+                  className={`relative px-4 py-2 text-[15px] tracking-wide transition-colors rounded-full ${
                     isActive
                       ? "text-[var(--color-grey-100)]"
                       : "text-[var(--color-grey-400)] hover:text-[var(--color-grey-100)]"
