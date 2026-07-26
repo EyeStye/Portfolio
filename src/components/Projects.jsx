@@ -84,16 +84,32 @@
 //                         ))}
 //                       </ul>
 
-//                       <a
-//                         href={project.github}
-//                         target="_blank"
-//                         rel="noreferrer"
-//                         className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-[var(--color-grey-200,var(--color-grey-100))] hover:text-[var(--color-moss-bright)] transition-colors w-fit"
-//                       >
-//                         <FiGithub size={16} />
-//                         GitHub Repository
-//                         <FiArrowUpRight size={14} />
-//                       </a>
+//                       <div className="mt-auto flex items-center gap-6 flex-wrap">
+//                         {project.github && (
+//                           <a
+//                             href={project.github}
+//                             target="_blank"
+//                             rel="noreferrer"
+//                             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-grey-200,var(--color-grey-100))] hover:text-[var(--color-moss-bright)] transition-colors w-fit"
+//                           >
+//                             <FiGithub size={16} />
+//                             GitHub Repository
+//                             <FiArrowUpRight size={14} />
+//                           </a>
+//                         )}
+
+//                         {project.demo && (
+//                           <a
+//                             href={project.demo}
+//                             target="_blank"
+//                             rel="noreferrer"
+//                             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-gold-bright)] hover:text-[var(--color-gold)] transition-colors w-fit"
+//                           >
+//                             Live Demo
+//                             <FiArrowUpRight size={14} />
+//                           </a>
+//                         )}
+//                       </div>
 //                     </div>
 //                   )}
 //                 </motion.div>
@@ -160,20 +176,22 @@ export default function Projects() {
                       </p>
                     </div>
                   ) : (
-                    <div className="p-8 flex flex-col h-full">
-                      <div className="flex items-start justify-between gap-4 mb-4">
-                        <h3 className="text-lg font-medium text-[var(--color-grey-100)]">
+                    <div className="p-8 flex flex-col h-full min-w-0">
+                      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2 mb-4">
+                        <h3 className="text-lg font-medium text-[var(--color-grey-100)] min-w-0 break-words">
                           {project.title}
                         </h3>
-                        <span
-                          className="flex-shrink-0 font-mono text-[11px] px-2.5 py-1 rounded-full border"
-                          style={{
-                            borderColor: "var(--color-line)",
-                            color: "var(--color-moss-bright)",
-                          }}
-                        >
-                          {project.tech}
-                        </span>
+                        {project.tech && (
+                          <span
+                            className="font-mono text-[11px] leading-relaxed px-2.5 py-1 rounded-full border max-w-full"
+                            style={{
+                              borderColor: "var(--color-line)",
+                              color: "var(--color-moss-bright)",
+                            }}
+                          >
+                            {project.tech}
+                          </span>
+                        )}
                       </div>
 
                       <p className="text-sm text-[var(--color-grey-400)] leading-relaxed mb-6">
