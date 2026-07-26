@@ -70,6 +70,24 @@ export const skills = {
 
 export const projects = [
   {
+    title: "FixTown",
+    tech: "React · Node.js · PostgreSQL/PostGIS",
+    description:
+      "A civic-tech platform where citizens report local infrastructure issues — potholes, manholes, utility faults — and municipalities track, prioritize, and resolve them on a live map.",
+    features: [
+      "Geo-tagged issue reporting with photo upload",
+      "Interactive Leaflet map with category filters",
+      "Citizen upvoting and priority ranking",
+      "Role-based auth for citizens and officers",
+      "Status tracking with audit log",
+      "In-app notifications on status change",
+      "Officer analytics dashboard",
+    ],
+    github: "https://github.com/YOUR_USERNAME/fixtown",
+    demo: "https://fixtown.vercel.app",
+    status: "complete",
+  },
+  {
     title: "Two-Pass Assembler and Emulator",
     tech: "C",
     description:
@@ -84,6 +102,7 @@ export const projects = [
       "Runtime error handling",
     ],
     github: "https://github.com/EyeStye/Simplex_Assembler",
+    demo: null,
     status: "complete",
   },
   {
@@ -92,6 +111,7 @@ export const projects = [
     description: "The next build is in progress. Check back soon.",
     features: [],
     github: null,
+    demo: null,
     status: "placeholder",
   },
 ];
