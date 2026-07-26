@@ -45,6 +45,10 @@
   --color-grey-400: #5c5e54;
   --color-grey-500: #797b70;
   --color-grey-600: #9a9c90;
+
+  --color-moss: #4f7a4c;
+  --color-moss-bright: #3d6339;
+  --color-gold: #a3812f;
 }
 
 * {
