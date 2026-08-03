@@ -4,7 +4,7 @@ export const profile = {
   tagline: "Competitive Programmer · Software Developer",
   email: "ayushthe8055@gmail.com",
   resumeUrl: "/resume.pdf",
-  profileImage: "/profile.jpg",
+  profileImage: "/profile.png",
   codeforcesHandle: "Primed",
   socials: {
     github: "https://github.com/eyestye",
