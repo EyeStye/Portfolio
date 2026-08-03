@@ -1,8 +1,12 @@
+import { useState } from "react";
 import SectionReveal from "./SectionReveal";
 import Eyebrow from "./Eyebrow";
-import { about } from "../data/profile";
+import { about, profile } from "../data/profile";
 
 export default function About() {
+  const [imgFailed, setImgFailed] = useState(false);
+  const hasImage = Boolean(profile.profileImage) && !imgFailed;
+
   return (
     <section id="about" className="relative py-28 md:py-36">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
@@ -20,11 +24,20 @@ export default function About() {
                   "linear-gradient(150deg, var(--color-surface) 0%, var(--color-surface-2) 100%)",
               }}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-mono text-6xl text-[var(--color-line)]">
-                  AY
-                </span>
-              </div>
+              {hasImage ? (
+                <img
+                  src={profile.profileImage}
+                  alt={profile.name}
+                  onError={() => setImgFailed(true)}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="font-mono text-6xl text-[var(--color-line)]">
+                    AY
+                  </span>
+                </div>
+              )}
               <div
                 className="absolute bottom-0 left-0 right-0 h-16"
                 style={{
